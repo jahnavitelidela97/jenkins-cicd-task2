@@ -19,7 +19,9 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building application...'
+                dir('my-cicd-app/package.json') { // Replace with actual subfolder name
                 sh 'npm install'
+                }
             }
         }
 
