@@ -1,6 +1,9 @@
 pipeline {
     agent any
-
+    tools {
+        nodejs 'NodeJS 18' // Replace with the name configured under Manage Jenkins -> Tools
+    }
+    
     options {
         skipStagesAfterUnstable()
     }
